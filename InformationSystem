@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class InformationSystem {
+	
+	private ArrayList<Student> students;
+	private Scanner scan;
+	
+	public InformationSystem() {
+		students = new ArrayList<>();
+		scan = new Scanner(System.in);
+	}
+
+	public void addRecord() {
+		System.out.println("ADD Record Menu\n");
+		System.out.print("\tEnter ID No.		: ");
+		int id = scan.nextInt();
+		scan.nextLine();
+		System.out.print("\tEnter First Name	: ");
+		String firstName = scan.nextLine();
+		System.out.print("\tEnter Middle Name	: ");
+		String middleName = scan.nextLine();
+		System.out.print("\tEnter Last Name		: ");
+		String lastName = scan.nextLine();
+		System.out.print("\tCourse			: ");
+		String course = scan.nextLine();
+		
+		students.add(new Student(id, firstName, middleName, lastName, course));
+		System.out.println();
+		System.out.println("\tRecord added successfully!");
+		System.out.println("\tPress Enter to continue...");
+		scan.nextLine();
+	}
+	
+	public void updateRecord() {
+		System.out.println("UPDATE Record Menu\n");
+		System.out.println("\tEnter the ID No. of the record to update");
+	}
+	
+}
