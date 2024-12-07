@@ -34,7 +34,19 @@ public class InformationSystem {
 	
 	public void updateRecord() {
 		System.out.println("UPDATE Record Menu\n");
-		System.out.println("\tEnter the ID No. of the record to update");
+		System.out.println("\tEnter the ID No. of the record to update:");
+		int id = scan.nextInt();
+		scan.nextLine();
+		
+		for (Student student : students) {
+			
+		}
+		
+		
+		System.out.println("\tSelect Options to Perform:");
+		System.out.println("\t   [1] - First Name");
+		System.out.println("\t   [2] - Middle Name");
+		
 	}
 	
 }
