@@ -51,6 +51,10 @@ public class Student {
 	public void setCourse(String course) {
 		this.course = course;
 	}
+
+	public String getName() {
+		return firstName + " " + middleName + " " + lastName;
+	}
 	
 
 }
