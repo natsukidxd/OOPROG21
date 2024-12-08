@@ -17,18 +17,44 @@ public class InformationSystemTester {
 			System.out.println("	[4] - Delete Record");
 			System.out.println("	[5] - Display All Record");
 			System.out.println("	[6] - Exit");
-			System.out.print("Enter your choice: ");
-			choice = scan.nextInt();
-			scan.nextLine();
-			
-			switch (choice) {
-				case 1: {
-					is.addRecord();
+			while(true) {
+				try {
+					System.out.print("	Enter your choice: ");
+					String choiceString = scan.nextLine();
+					choice = Integer.parseInt(choiceString);
 					break;
+				} catch(NumberFormatException e) {
+					System.out.println("\t[  Invalid input. ] \n\t[Please try again.]");
 				}
-				case 2: {
-					
-				}
+			}
+			switch (choice) {
+			case 1: {
+				is.addRecord();
+				break;
+			}
+			case 2: {
+				is.updateRecord();
+				break;
+			}
+			case 3: {
+				is.searchRecord();
+				break;
+			}
+			case 4: {
+				is.deleteRecord();
+				break;
+			}
+			case 5: {
+				is.displayAllRecord();
+				break;
+			}
+			case 6: {
+				System.out.println("\n[Information System terminated.]");
+				break;
+			}
+			default: {
+				System.out.println("\n\t[  Invalid input. ] \n\t[Please try again.]\n");
+			}
 			}
 			
 		} while(choice != 6);
